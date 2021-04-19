@@ -4,7 +4,7 @@ const returnRandBase = () => {
   return dnaBases[Math.floor(Math.random() * 4)];
 };
 
-// Returns a random single stand of DNA containing 15 bases
+// Returns a random single stand of DNA containing 14 bases
 const mockUpStrand = () => {
   const newStrand = [];
   for (let i = 0; i < 14; i++) {
@@ -139,18 +139,17 @@ const mostRelated = (arrayOfpaequor) => {
 
 
 
-
-
-function createPaequor(){
-	document.getElementById("organism").innerHTML = "";
-	const arrayOfpaequor = createInstances(30);
-	for(let i=0; i<arrayOfpaequor.length-1;i++){
+function createPaequor(numberOfInstances) {
+    // var sum = parseInt(numberOfInstances)
+  	document.getElementById("organism").innerHTML = "";
+	const arrayOfpaequor = createInstances(numberOfInstances);
+	for(let i=0; i<arrayOfpaequor.length;i++){
 		let paequorDna = arrayOfpaequor[i].getDNA();
+		let paequorNum = arrayOfpaequor[i].getSpecimenNum();
 		let organism = document.getElementById("organism");
-		organism.innerHTML += `<span class="${i}">`+ paequorDna +"</span>"+"<br>";
+		organism.innerHTML += `<span class="${i}"> Organism ${paequorNum} is `+ paequorDna +"</span>"+"<br>";
 	}
-}
-
+  }
 
 
 

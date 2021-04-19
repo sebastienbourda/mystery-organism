@@ -7,32 +7,20 @@
 </head>
 <body>
 	<div class="main">
-		<header id="header" class="">
+		<header id="header">
 			<h1>Mystery Organism Generator</h1>
 			<p>This project is based on same name Codecademy project extract from Full stack engineer path.</p>	
+			<p>Each organism is composed of 14 random nucleobases choosen between A, C, G, T.</p>
 		</header><!-- /header -->
 		<div class="controls">
-			<button onclick="createPaequor()">Generate one organism (composed of 14 random nucleobases).</button>
+			<button onclick="createPaequor(30)">Generate directly 30 organisms.</button>
+			<input type="number" name="numberOfInstances" id="numberOfInstances" placeholder="Enter a number">
+  			<button onclick="createPaequor(document.getElementById('numberOfInstances').value)">Add</button>
+
 		</div>
 		<div class="container">
 			<div id="organism" class="organism">
 				<!-- Here you can find the organism visualization. -->
-
-
-				<!-- <span class="nucleobase A-base"></span>
-				<span class="nucleobase T-base"></span>
-				<span class="nucleobase C-base"></span>
-				<span class="nucleobase G-base"></span>
-				<span class="nucleobase A-base"></span>
-				<span class="nucleobase T-base"></span>
-				<span class="nucleobase C-base"></span>
-				<span class="nucleobase G-base"></span>
-				<span class="nucleobase A-base"></span>
-				<span class="nucleobase T-base"></span>
-				<span class="nucleobase C-base"></span>
-				<span class="nucleobase G-base"></span>
-				<span class="nucleobase A-base"></span>
-				<span class="nucleobase T-base"></span> -->
 			</div>
 		</div>
 	</div>
