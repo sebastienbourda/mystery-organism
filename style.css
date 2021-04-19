@@ -1,7 +1,10 @@
-.container {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: blue; }
+.organism span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #FFF;
+  border-radius: 50%;
+  top: 40%;
+  left: 120px; }
 
 /*# sourceMappingURL=style.css.map */

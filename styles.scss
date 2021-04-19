@@ -1,6 +1,102 @@
-.container {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: blue;
+/* Reset */
+
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+
+*, *:after, *:before {
+  box-sizing: border-box;
 }
+
+body {
+  background: #000;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: 'Slabo 27px', serif;
+  display: flex;
+  height: 100vh;
+  justify-content: left;
+}
+
+
+/* Project Code */
+
+.organism{
+	span.nucleobase{
+		position: absolute;
+	    width: 15px;
+	    z-index: 1;
+	    height: 15px;
+	    background: #FFF;
+	    border-radius: 50%;
+	}
+	span.nucleobase:nth-of-type(even){
+		top: 40%;
+	}
+	span.nucleobase:nth-of-type(odd){
+		top: 50%;
+	}
+	span.nucleobase:nth-of-type(1){
+	    left: 120px;
+	}
+	span.nucleobase:nth-of-type(2){
+	    left: 120px;
+	}
+	span.nucleobase:nth-of-type(3){
+	    left: 160px;
+	}
+	span.nucleobase:nth-of-type(4){
+	    left: 160px;
+	}
+	span.nucleobase:nth-of-type(5){
+	    left: 200px;
+	}
+	span.nucleobase:nth-of-type(6){
+	    left: 200px;
+	}
+	span.nucleobase:nth-of-type(7){
+	    left: 240px;
+	}
+	span.nucleobase:nth-of-type(8){
+	    left: 240px;
+	}
+	span.nucleobase:nth-of-type(9){
+	    left: 280px;
+	}
+	span.nucleobase:nth-of-type(10){
+	    left: 280px;
+	}
+	span.nucleobase:nth-of-type(11){
+	    left: 320px;
+	}
+	span.nucleobase:nth-of-type(12){
+	    left: 320px;
+	}
+	span.nucleobase:nth-of-type(13){
+	    left: 360px;
+	}
+	span.nucleobase:nth-of-type(14){
+	    left: 360px;
+	}
+	span.line{
+		position: absolute;
+	    width: 5px;
+	    z-index: 0;
+	    height: 10%;
+	    top: 41%;
+	    left: 125px;
+	    background: #FFF;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
