@@ -16,11 +16,35 @@ body {
 /* Project Code */
 .organism span.nucleobase {
   position: absolute;
-  width: 15px;
+  width: 20px;
   z-index: 1;
-  height: 15px;
+  height: 20px;
   background: #FFF;
   border-radius: 50%; }
+.organism span.A-base {
+  /*&:after{
+  	content: "A";
+  	color: #FFFFFF;
+  }*/
+  background: blue; }
+.organism span.C-base {
+  /*&:after{
+  	content: "C";
+  	color: #FFFFFF;
+  }*/
+  background: red; }
+.organism span.G-base {
+  /*&:after{
+  	content: "G";
+  	color: #FFFFFF;
+  }*/
+  background: green; }
+.organism span.T-base {
+  /*&:after{
+  	content: "T";
+  	color: #FFFFFF;
+  }*/
+  background: yellow; }
 .organism span.nucleobase:nth-of-type(even) {
   top: 40%; }
 .organism span.nucleobase:nth-of-type(odd) {
@@ -30,29 +54,29 @@ body {
 .organism span.nucleobase:nth-of-type(2) {
   left: 120px; }
 .organism span.nucleobase:nth-of-type(3) {
-  left: 160px; }
+  left: 180px; }
 .organism span.nucleobase:nth-of-type(4) {
-  left: 160px; }
+  left: 180px; }
 .organism span.nucleobase:nth-of-type(5) {
-  left: 200px; }
+  left: 240px; }
 .organism span.nucleobase:nth-of-type(6) {
-  left: 200px; }
+  left: 240px; }
 .organism span.nucleobase:nth-of-type(7) {
-  left: 240px; }
+  left: 300px; }
 .organism span.nucleobase:nth-of-type(8) {
-  left: 240px; }
+  left: 300px; }
 .organism span.nucleobase:nth-of-type(9) {
-  left: 280px; }
+  left: 360px; }
 .organism span.nucleobase:nth-of-type(10) {
-  left: 280px; }
+  left: 360px; }
 .organism span.nucleobase:nth-of-type(11) {
-  left: 320px; }
+  left: 420px; }
 .organism span.nucleobase:nth-of-type(12) {
-  left: 320px; }
+  left: 420px; }
 .organism span.nucleobase:nth-of-type(13) {
-  left: 360px; }
+  left: 480px; }
 .organism span.nucleobase:nth-of-type(14) {
-  left: 360px; }
+  left: 480px; }
 .organism span.line {
   position: absolute;
   width: 5px;

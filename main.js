@@ -7,7 +7,7 @@ const returnRandBase = () => {
 // Returns a random single stand of DNA containing 15 bases
 const mockUpStrand = () => {
   const newStrand = [];
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 14; i++) {
     newStrand.push(returnRandBase());
   }
   return newStrand;
@@ -66,7 +66,7 @@ const pAequorFactory = (number, dnaArray) => {
 
 const createInstances = (number) => {
 	let arrayOfPaequor = [];
-	while(arrayOfPaequor.length < 30){
+	while(arrayOfPaequor.length < number){
 		const lastIndex = arrayOfPaequor.length;
 		const newPaequor = pAequorFactory(lastIndex+1, mockUpStrand());
 		if(newPaequor.willLikelySurvive()){
@@ -130,10 +130,9 @@ const mostRelated = (arrayOfpaequor) => {
 //console.log(pAequor1.compareDNA(pAequor2));
 //console.log(pAequor1.willLikelySurvive());
 
-const arrayOfpaequor = createInstances(30);
+//const arrayOfpaequor = createInstances(3);
 
-
-mostRelated(arrayOfpaequor);
+//mostRelated(arrayOfpaequor);
 
 
 //console.log(complementStrand(pAequor1.dna));
@@ -142,15 +141,23 @@ mostRelated(arrayOfpaequor);
 
 
 
+function createPaequor(){
+	document.getElementById("organism").innerHTML = "";
+	const arrayOfpaequor = createInstances(30);
+	for(let i=0; i<arrayOfpaequor.length-1;i++){
+		let paequorDna = arrayOfpaequor[i].getDNA();
+		let organism = document.getElementById("organism");
+		organism.innerHTML += `<span class="${i}">`+ paequorDna +"</span>"+"<br>";
+	}
+}
 
 
 
 
-
-
-
-
-
+// function myFunction() {
+//   var x = document.getElementById("mySpan").style.color;
+//   document.getElementById("demo").innerHTML = x;
+// }
 
 
 
