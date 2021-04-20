@@ -137,19 +137,46 @@ const mostRelated = (arrayOfpaequor) => {
 
 //console.log(complementStrand(pAequor1.dna));
 
+let arrayOfpaequor = [];
+
+const clearData = () => {
+	// document.getElementById("organism").innerHTML = "";
+	const elements = document.getElementsByClassName("organism");
+	while (elements.length > 0) elements[0].remove();
+}
 
 
-function createPaequor(numberOfInstances) {
-    // var sum = parseInt(numberOfInstances)
-  	document.getElementById("organism").innerHTML = "";
-	const arrayOfpaequor = createInstances(numberOfInstances);
+const createPaequor = (numberOfInstances) => {
+	clearData();
+	arrayOfpaequor = [];
+	for(i=0;i<numberOfInstances;i++){
+		arrayOfpaequor.push(pAequorFactory(i, mockUpStrand()));
+	}
+	for(let j=0; j<arrayOfpaequor.length;j++){
+		let paequorDna = arrayOfpaequor[j].getDNA();
+		let paequorNum = arrayOfpaequor[j].getSpecimenNum();
+		let organism = document.getElementById("organism");
+		organism.innerHTML += `<p class="organism ${j}"> Organism ${paequorNum} is `+ paequorDna +"</p>";
+	}
+}
+
+
+const compareDna = () => {
 	for(let i=0; i<arrayOfpaequor.length;i++){
+		let paequorWillSurvive = arrayOfpaequor[i].willLikelySurvive();
 		let paequorDna = arrayOfpaequor[i].getDNA();
 		let paequorNum = arrayOfpaequor[i].getSpecimenNum();
 		let organism = document.getElementById("organism");
-		organism.innerHTML += `<span class="${i}"> Organism ${paequorNum} is `+ paequorDna +"</span>"+"<br>";
+		organism.innerHTML += `<span class="organism ${i}"> Organism ${paequorNum} is `+ paequorWillSurvive +"</span>"+"<br>";
 	}
-  }
+	// for (var i = 0; i < arrayOfpaequor.length; i++) {
+	// 	let willSurvive = arrayOfpaequor[i].willLikelySurvive();
+	// 	let paequorNum = arrayOfpaequor[i].getSpecimenNum();
+	// 	let organism = document.getElementsByClassName("organism");
+	// 	organism.innerHTML += `<span class="${i}"> Organism ${paequorNum} is `+ willSurvive +"</span>"+"<br>";
+	// }
+}
+
 
 
 

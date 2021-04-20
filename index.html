@@ -13,13 +13,16 @@
 			<p>Each organism is composed of 14 random nucleobases choosen between A, C, G, T.</p>
 		</header><!-- /header -->
 		<div class="controls">
-			<button onclick="createPaequor(30)">Generate directly 30 organisms.</button>
+			<button onclick="clearData()">Clear Data</button>
+			<span>How many organisms do you want to create?</span>
 			<input type="number" name="numberOfInstances" id="numberOfInstances" placeholder="Enter a number">
   			<button onclick="createPaequor(document.getElementById('numberOfInstances').value)">Add</button>
+  			<button onclick="createPaequor(30)">Generate directly 30 organisms.</button>
+  			<button onclick="compareDna()">Will likely survive</button>
 
 		</div>
 		<div class="container">
-			<div id="organism" class="organism">
+			<div id="organism">
 				<!-- Here you can find the organism visualization. -->
 			</div>
 		</div>
