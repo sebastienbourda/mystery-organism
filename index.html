@@ -6,24 +6,27 @@
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-	<div class="main">
-		<header id="header">
-			<h1>Mystery Organism Generator</h1>
-			<p>This project is based on same name Codecademy project extract from Full stack engineer path.</p>	
-			<p>Each organism is composed of 14 random nucleobases choosen between A, C, G, T.</p>
-		</header><!-- /header -->
-		<div class="controls">
-			<button onclick="clearData()">Clear Data</button>
-			<span>How many organisms do you want to create?</span>
-			<input type="number" name="numberOfInstances" id="numberOfInstances" placeholder="Enter a number">
-  			<button onclick="createPaequor(document.getElementById('numberOfInstances').value)">Add</button>
-  			<button onclick="createPaequor(30)">Generate directly 30 organisms.</button>
-  			<button onclick="compareDna()">Will likely survive</button>
+	<div class="flex-container">
+		<!-- Header -->
+	  	<div id="header" class="flex-item">
+	 	 	<h2 class="title">Mystery Organism Generator</h2>
+	 	</div>
+	 	<!-- Control menu -->
+	 	<div class="flex-item">
+	 		<span>How many organisms do you want to create?</span>
+	 	</div>
+	 	<ul class="navigation">
+			<li><input type="number" name="numberOfInstances" id="numberOfInstances" placeholder="Enter a number">
+	 	 		<button onclick="createPaequor(document.getElementById('numberOfInstances').value)">Add</button></li>
+		 	<li><button onclick="createPaequor(30)">Generate directly 30 organisms.</button></li>
+			<li><button onclick="compareDna()">Will likely survive</button></li>
+			<li><button onclick="clearData()">Clear Data</button></li>
+		</ul>
 
-		</div>
-		<div class="container">
+		<!-- Here functions display organism -->
+	 	<div id="content">
 			<div id="organism">
-				<!-- Here you can find the organism visualization. -->
+				
 			</div>
 		</div>
 	</div>
