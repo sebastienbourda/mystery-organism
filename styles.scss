@@ -13,93 +13,94 @@ body {
   margin: 0;
   font-family: 'Slabo 27px', serif;
   height: 100vh;
+  text-align: center;
 }
+
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+button{
+  border: 1px solid #FFF;
+  background: #000;
+  color: #FFF;
+  padding: 5px 10px;
+}
+
 
 
 /* Project Code */
 
-
-.flex-container {
-  /* We first create a flex layout context */
-  display: flex;
-  height: 100%;
-  /* Then we define the flow direction 
-     and if we allow the items to wrap 
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
-  flex-flow: column nowrap;
-  /* Then we define how is distributed the remaining space */
-  justify-content: left;
-  align-items: stretch;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 #header{
 	width: 100%;
+  h2{
+    margin-top: 0;
+    padding-top: 10px; 
+  }
 }
 
-.flex-item {
-  background: tomato;
-  padding: 0;
+
+h2{
   margin-top: 0;
-  line-height: 50px;
-  color: white;
-  font-weight: bold;
-  /*font-size: 3em;*/
+}
+
+nav{
+  margin: 0 auto;
   text-align: center;
-  p{
-  	size:2rem;
+  ul{
+    height: 50px;
+    li{
+      display: inline-block;
+      height: 100%;
+      padding: 5px;
+    }
   }
 }
 
-.navigation {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  list-style: none;
-  margin: 0; 
-  background: tomato;
+ul#organism{
+  margin: 50px auto;
+  width: 80%;
   li{
-  	margin-right: 10px; 
+    display: inline-block;
+    height: 10vh;
+    width: 20%;
   }
 }
 
-#content{
-	padding: 20px;
-	#organism{
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		list-style: none;
-		margin: 0;
-		.organism-item{
-			margin: 10px;
-			padding: 10px;
-		}
-	}
-}
 
-@media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
-}
 
-@media all and (max-width: 600px) {
-  .navigation {
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  .navigation a { 
-    text-align: center; 
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255,0.3); 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
-  }a li:last-of-type a {
-    border-bottom: none;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -152,11 +152,11 @@ const createPaequor = (numberOfInstances) => {
 	for(i=0;i<numberOfInstances;i++){
 		arrayOfpaequor.push(pAequorFactory(i+1, mockUpStrand()));
 	}
+	let organism = document.getElementById("organism");
 	for(let j=0;j<arrayOfpaequor.length;j++){
 		let paequorDna = arrayOfpaequor[j].getDNA();
 		let paequorNum = arrayOfpaequor[j].getSpecimenNum();
-		let organism = document.getElementById("organism");
-		organism.innerHTML += `<span class="organism-item ${paequorNum}"> `+ paequorDna +"</span>";
+		organism.innerHTML += `<li class="organism-item ${paequorNum}">Organism ${paequorNum} ${paequorDna} </li>`;
 	}
 }
 
